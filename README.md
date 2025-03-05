@@ -25,3 +25,8 @@
    ```sh
    flutter run lib/main.dart
    ```
+
+### Features
+
+- Enabled **Guided Access** on iOS and **Screen Pinning** on Android.
+- Disabled **Screenshot** and **Screen Recording** when in Guided Access or Screen Pinning mode.

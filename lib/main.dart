@@ -1,6 +1,7 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:kiosk_mode/kiosk_mode.dart';
+import 'package:no_screenshot/no_screenshot.dart';
 
 void main() {
   runApp(const MyApp());
@@ -32,23 +33,26 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   late final Stream<KioskMode> _currentMode = watchKioskMode();
+  final _noScreenshot = NoScreenshot.instance;
 
   void _showSnackBar(String message) => ScaffoldMessenger.of(
     context,
   ).showSnackBar(SnackBar(content: Text(message)));
 
-  void _handleStart(bool didStart) {
+  void _handleStart(bool didStart) async {
     if (!didStart && Platform.isIOS) {
       _showSnackBar(_unsupportedMessage);
     }
+    await _noScreenshot.screenshotOff();
   }
 
-  void _handleStop(bool? didStop) {
+  void _handleStop(bool? didStop) async {
     if (didStop == false) {
       _showSnackBar(
         'Kiosk mode could not be stopped or was not active to begin with.',
       );
     }
+    await _noScreenshot.screenshotOn();
   }
 
   @override
