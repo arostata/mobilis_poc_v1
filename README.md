@@ -30,3 +30,4 @@
 
 - Enabled **Guided Access** on iOS and **Screen Pinning** on Android.
 - Disabled **Screenshot** and **Screen Recording** when in Guided Access or Screen Pinning mode.
+- Enter **Full Screen** when in Guided Access or Screen Pinning mode.

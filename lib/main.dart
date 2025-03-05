@@ -1,5 +1,6 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:kiosk_mode/kiosk_mode.dart';
 import 'package:no_screenshot/no_screenshot.dart';
 
@@ -40,19 +41,22 @@ class _MyHomePageState extends State<MyHomePage> {
   ).showSnackBar(SnackBar(content: Text(message)));
 
   void _handleStart(bool didStart) async {
+    await _noScreenshot.screenshotOff();
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
     if (!didStart && Platform.isIOS) {
       _showSnackBar(_unsupportedMessage);
     }
-    await _noScreenshot.screenshotOff();
   }
 
   void _handleStop(bool? didStop) async {
+    await _noScreenshot.screenshotOn();
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
+
     if (didStop == false) {
       _showSnackBar(
         'Kiosk mode could not be stopped or was not active to begin with.',
       );
     }
-    await _noScreenshot.screenshotOn();
   }
 
   @override
