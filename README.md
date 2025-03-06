@@ -31,3 +31,8 @@
 - Enabled **Guided Access** on iOS and **Screen Pinning** on Android.
 - Disabled **Screenshot** and **Screen Recording** when in Guided Access or Screen Pinning mode. (Can still record the screen but it will just be black)
 - Enter **Full Screen** when in Guided Access or Screen Pinning mode.
+
+### Upcoming Features
+
+- Enabled **DND (Do Not Disturb)** when in Guided Access or Screen Pinning mode. This will prevent any notifications, overlay, or floating buttons to appear when taking exam.
+- Trigger **Fixed Brightness** when in Guided Access or Screen Pinning mode. Still thinking about this, candidates might complain about having high brightness during exam.
