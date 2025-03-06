@@ -29,5 +29,5 @@
 ### Features
 
 - Enabled **Guided Access** on iOS and **Screen Pinning** on Android.
-- Disabled **Screenshot** when in Guided Access or Screen Pinning mode.
+- Disabled **Screenshot** and **Screen Recording** when in Guided Access or Screen Pinning mode. (Can still record the screen but it will just be black)
 - Enter **Full Screen** when in Guided Access or Screen Pinning mode.
