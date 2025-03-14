@@ -26,8 +26,9 @@
    flutter run lib/main.dart
    ```
 
-### Features
+### Features (Tested on Android only | Requires Android 12, API Level 31)
 
+- Hide overlay windows by default (e.g. Facebook Messenger Chat Heads)
 - Enabled **Guided Access** on iOS and **Screen Pinning** on Android.
 - Disabled **Screenshot** and **Screen Recording** when in Guided Access or Screen Pinning mode. (Can still record the screen but it will just be black)
 - Enter **Full Screen** when in Guided Access or Screen Pinning mode.

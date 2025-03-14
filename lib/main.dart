@@ -51,7 +51,6 @@ class _MyHomePageState extends State<MyHomePage> {
   void _handleStop(bool? didStop) async {
     await _noScreenshot.screenshotOn();
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
-
     if (didStop == false) {
       _showSnackBar(
         'Kiosk mode could not be stopped or was not active to begin with.',
