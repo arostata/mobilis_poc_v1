@@ -63,12 +63,13 @@ class SignInScreenState extends State<SignInScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Icon(
-                    CupertinoIcons.chart_bar,
-                    size: 50,
-                    color: CupertinoColors.systemPurple,
+                  Image.asset(
+                    'assets/images/logo_1.png',
+                    width: 100, // Adjust width
+                    height: 100, // Adjust height
+                    fit: BoxFit.contain,
                   ),
-                  const SizedBox(height: 20),
+                  const SizedBox(height: 10),
                   Text(
                     "Welcome to Webassessor!",
                     style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
