@@ -31,7 +31,7 @@ class SignInScreenState extends State<SignInScreen> {
     setState(() => _isLoading = false);
 
     if (response.accessToken != null) {
-      //show the my assessment screen after successful login.
+      /* show the my assessment screen after successful login. */
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (context) => const MyAssessmentScreen()),

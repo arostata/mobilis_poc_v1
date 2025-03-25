@@ -5,5 +5,5 @@ import 'package:mobilis_poc_v1/views/screens/sign_in_screen.dart';
 import 'core/theme/app_theme.dart';
 
 void main() {
-  runApp(AppTheme.getApp(const MyAssessmentScreen())); // Dynamically switch app
+  runApp(AppTheme.getApp(const SignInScreen())); // Dynamically switch app
 }
